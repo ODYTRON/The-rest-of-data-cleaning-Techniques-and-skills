@@ -1,0 +1,21 @@
+import pandas as pd
+data_files = [
+    "ap_2010.csv",
+    "class_size.csv",
+    "demographics.csv",
+    "graduation.csv",
+    "hs_directory.csv",
+    "sat_results.csv"
+]
+data = {}
+
+# for file name in list data_files
+for f in data_files:
+    # put in variable d the csv's transformed into dataframes begining     
+    # from the subfile 0,1,2 and so on. Keep the format of the file name 
+    # according to the data_files list
+    d = pd.read_csv("schools/{0}".format(f))
+    # set as key name only the file name without format
+    key_name = f.replace(".csv", "")
+    # put as value the content of d variable
+    data[key_name] = d

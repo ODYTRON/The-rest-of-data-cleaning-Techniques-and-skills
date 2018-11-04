@@ -1,0 +1,3 @@
+# print the first 5 lines of the dataframe dat_results
+# notice that you have transorm that into a dictionary
+print (data["sat_results"].head())
